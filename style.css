@@ -1868,3 +1868,196 @@ body:has(.case-study-image) .skill-card p {
     }
 
 }
+/* =========================================================
+   COMPANY LOGO MARQUEE
+   ========================================================= */
+
+.company-banner {
+    width: 100%;
+
+    padding:
+        22px 0;
+
+    background: var(--blue-soft);
+
+    border-top:
+        1px solid var(--blue-border);
+
+    border-bottom:
+        1px solid var(--blue-border);
+
+    overflow: hidden;
+}
+
+
+.company-banner-inner {
+    width: 100%;
+}
+
+
+/* Small label */
+
+.company-banner-label {
+    width: var(--content-width);
+
+    max-width: 1080px;
+
+    margin:
+        0 auto 14px;
+
+    color: var(--blue);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* Visible marquee window */
+
+.company-marquee {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* Moving strip */
+
+.company-track {
+    display: flex;
+
+    align-items: center;
+
+    width: max-content;
+
+    animation:
+        company-scroll
+        32s
+        linear
+        infinite;
+
+    will-change: transform;
+}
+
+
+/* Individual logo container */
+
+.company-logo {
+    flex:
+        0 0 auto;
+
+    width:
+        clamp(110px, 11vw, 155px);
+
+    height:
+        clamp(38px, 4vw, 52px);
+
+    margin:
+        0 clamp(22px, 3vw, 40px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Actual logo */
+
+.company-logo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(100%);
+
+    opacity: 0.48;
+
+    transition:
+        opacity 0.25s ease,
+        filter 0.25s ease;
+
+}
+
+
+/* Slightly stronger on hover */
+
+.company-logo:hover img {
+    opacity: 0.68;
+
+    filter:
+        grayscale(100%);
+}
+
+
+/* Continuous motion */
+
+@keyframes company-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* Pause when hovered */
+
+.company-marquee:hover .company-track {
+    animation-play-state: paused;
+}
+
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .company-track {
+        animation: none;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .company-banner {
+        padding:
+            18px 0;
+    }
+
+    .company-banner-label {
+        width:
+            calc(100vw - (2 * var(--gutter)));
+
+        margin-bottom: 10px;
+    }
+
+    .company-logo {
+        width: 105px;
+
+        height: 34px;
+
+        margin:
+            0 20px;
+    }
+
+}
