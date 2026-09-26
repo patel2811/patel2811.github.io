@@ -1116,3 +1116,181 @@ section:last-of-type .case-study-action {
 .case-study-action .btn {
     margin: 0;
 }
+/* =========================================================
+   HOMEPAGE EXPERIENCE TIMELINE
+   ========================================================= */
+
+.experience-track {
+    position: relative;
+
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 65px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* Horizontal connector line */
+
+.experience-track::before {
+    content: "";
+
+    position: absolute;
+
+    left: 3.2%;
+    right: 3.2%;
+
+    top: 55px;
+
+    height: 2px;
+
+    background: var(--blue-border);
+
+    z-index: 0;
+}
+
+
+/* Individual experience node */
+
+.experience-node {
+    position: relative;
+    z-index: 1;
+
+    min-width: 0;
+}
+
+
+/* Number */
+
+.experience-number {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Timeline dot */
+
+.experience-dot {
+    width: 13px;
+    height: 13px;
+
+    margin: 0 0 22px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    border: 4px solid var(--white);
+
+    box-shadow:
+        0 0 0 2px var(--blue-border);
+}
+
+
+/* Company */
+
+.experience-company {
+    margin-bottom: 10px;
+
+    color: var(--blue);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+/* Role */
+
+.experience-node h3 {
+    margin-bottom: 8px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* Date */
+
+.experience-date {
+    margin-bottom: 14px;
+
+    color: var(--text-soft);
+
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.experience-description {
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+
+/* Resume link spacing */
+
+.experience-section .section-action {
+    margin-top: 48px;
+}
+
+
+/* =========================================================
+   EXPERIENCE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .experience-track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        row-gap: 55px;
+    }
+
+    .experience-track::before {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .experience-track {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        margin-top: 45px;
+    }
+
+    .experience-number {
+        margin-bottom: 8px;
+    }
+
+    .experience-dot {
+        margin-bottom: 15px;
+    }
+
+}
