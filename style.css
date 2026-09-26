@@ -1,3 +1,711 @@
-HTML = structure
-CSS = appearance
-JavaScript = behavior
+/* =========================================================
+   RUCHI PATEL PORTFOLIO
+   Main visual system
+   ========================================================= */
+
+/* ---------- Google Fonts ---------- */
+/* These load automatically when your website is online. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ---------- Design Variables ---------- */
+:root {
+    --navy: #102a43;
+    --navy-dark: #0b1f33;
+    --blue: #2563a6;
+    --blue-light: #eaf3fb;
+    --blue-soft: #f5f9fd;
+    --blue-border: #d7e5f2;
+
+    --text: #243b53;
+    --text-soft: #627d98;
+    --white: #ffffff;
+    --off-white: #fbfcfe;
+
+    --border: #e6edf4;
+    --shadow-soft: 0 10px 30px rgba(16, 42, 67, 0.08);
+    --shadow-hover: 0 18px 45px rgba(16, 42, 67, 0.13);
+
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+
+    --max-width: 1180px;
+}
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Makes images responsive */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Links */
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    color: var(--navy-dark);
+}
+
+/* ---------- Typography ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--navy);
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.25rem);
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    color: var(--text-soft);
+}
+
+/* ---------- Page Container ---------- */
+
+main,
+section {
+    width: 100%;
+}
+
+section {
+    padding: 100px 6%;
+}
+
+section > * {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 18px 6%;
+
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--navy);
+    margin-left: 24px;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* ---------- Hero ---------- */
+
+header,
+.hero {
+    position: relative;
+    min-height: 78vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 6%;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(37, 99, 166, 0.10), transparent 25%),
+        radial-gradient(circle at 90% 30%, rgba(92, 145, 195, 0.11), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+/* Hero content */
+header > *,
+.hero > * {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- Hero Intro ---------- */
+
+.hero h1,
+header h1 {
+    max-width: 800px;
+    margin-bottom: 18px;
+}
+
+.hero h2,
+header h2 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+}
+
+.hero p,
+header p {
+    max-width: 720px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ---------- Hero Decorative Layer ---------- */
+
+header::before,
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+
+    right: -120px;
+    top: 80px;
+
+    border-radius: 50%;
+    background: rgba(37, 99, 166, 0.05);
+
+    pointer-events: none;
+}
+
+header::after,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+
+    left: 3%;
+    bottom: 10%;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(rgba(37, 99, 166, 0.11) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 166, 0.11) 1px, transparent 1px);
+
+    background-size: 22px 22px;
+
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ---------- Buttons ---------- */
+
+button,
+.button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+    margin-top: 22px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: var(--blue);
+    color: var(--white);
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+    background: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ---------- About ---------- */
+
+#about {
+    background: var(--white);
+}
+
+#about p {
+    max-width: 780px;
+    margin-top: 22px;
+    font-size: 1.05rem;
+}
+
+/* ---------- Experience ---------- */
+
+#experience {
+    background: var(--blue-soft);
+}
+
+#experience h2,
+#projects h2,
+#education h2,
+#skills h2,
+#contact h2 {
+    margin-bottom: 28px;
+}
+
+/* ---------- Experience Timeline ---------- */
+
+.timeline {
+    position: relative;
+    max-width: 980px;
+    margin: 55px auto 0;
+
+    padding-left: 35px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 5px;
+
+    width: 2px;
+    background: var(--blue-border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 42px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 7px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    background: var(--blue);
+
+    box-shadow: 0 0 0 6px rgba(37, 99, 166, 0.10);
+}
+
+.timeline-item h3 {
+    margin-bottom: 6px;
+}
+
+.timeline-item .date {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ---------- Project Section ---------- */
+
+#projects {
+    background: var(--white);
+}
+
+/* Project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+
+    max-width: var(--max-width);
+    margin: 50px auto 0;
+}
+
+/* Project cards */
+.project-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--blue-border);
+}
+
+.project-card h3 {
+    margin: 14px 0 12px;
+}
+
+.project-card p {
+    margin-bottom: 18px;
+}
+
+/* Project tags */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: var(--blue-light);
+    color: var(--blue);
+
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Education ---------- */
+
+#education {
+    background: var(--blue-soft);
+}
+
+.education-card {
+    max-width: 900px;
+    margin: 25px auto 0;
+
+    padding: 28px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.education-card + .education-card {
+    margin-top: 18px;
+}
+
+.education-card h3 {
+    margin-bottom: 8px;
+}
+
+.education-card .school {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+/* ---------- Skills ---------- */
+
+#skills {
+    background: var(--white);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    max-width: var(--max-width);
+    margin: 45px auto 0;
+}
+
+.skill-card {
+    padding: 25px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    background: var(--white);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+}
+
+.skill-card h3 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* ---------- Contact ---------- */
+
+#contact {
+    background:
+        linear-gradient(135deg, #f5f9fd 0%, #eef6fc 100%);
+    text-align: center;
+}
+
+#contact p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 35px 6%;
+    text-align: center;
+
+    background: var(--navy-dark);
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--white);
+}
+
+/* ---------- Headshot ---------- */
+
+.headshot {
+    width: 290px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-lg);
+
+    border: 8px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow: 0 20px 45px rgba(16, 42, 67, 0.16);
+
+    background: var(--blue-soft);
+}
+
+/* If image is inside a hero container */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Two Column Layout ---------- */
+
+.two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 70px;
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* ---------- Reveal Animation ---------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- General Lists ---------- */
+
+ul {
+    padding-left: 1.3rem;
+}
+
+li {
+    margin-bottom: 8px;
+    color: var(--text-soft);
+}
+
+/* ---------- Selection ---------- */
+
+::selection {
+    background: rgba(37, 99, 166, 0.18);
+    color: var(--navy);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 80px 5%;
+    }
+
+    header,
+    .hero {
+        padding: 85px 5%;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav {
+        padding: 15px 5%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 65px 5%;
+    }
+
+    header,
+    .hero {
+        min-height: auto;
+        padding: 75px 5%;
+    }
+
+    header::before,
+    .hero::before {
+        width: 250px;
+        height: 250px;
+        right: -100px;
+    }
+
+    header::after,
+    .hero::after {
+        width: 110px;
+        height: 110px;
+    }
+
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 0.88rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .headshot {
+        width: 230px;
+        height: 285px;
+    }
+
+    .timeline {
+        padding-left: 28px;
+    }
+
+    .timeline-item::before {
+        left: -27px;
+    }
+}
+
+/* ---------- Accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
