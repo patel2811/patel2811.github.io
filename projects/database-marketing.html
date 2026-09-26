@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Ruchi Patel — Database Marketing case study using SQL to analyze e-commerce purchasing behavior and revenue drivers."
+    >
+
+    <title>Database Marketing | Ruchi Patel</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div>
+            <strong>Ruchi Patel</strong>
+        </div>
+
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#education">Education</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         CASE STUDY HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div>
+
+            <a href="../index.html#projects">
+                ← Back to Projects
+            </a>
+
+            <div class="project-tags">
+
+                <span class="project-tag">
+                    Database Marketing
+                </span>
+
+                <span class="project-tag">
+                    SQL
+                </span>
+
+                <span class="project-tag">
+                    E-Commerce Analytics
+                </span>
+
+            </div>
+
+
+            <h1>
+                Drivers of Product
+                Success &amp; Revenue
+            </h1>
+
+
+            <p>
+                Using SQL to analyze e-commerce purchasing behavior,
+                product performance, promotions, ratings, and regional
+                payment preferences.
+            </p>
+
+
+            <p>
+                <strong>Graduate Database Marketing Project</strong><br>
+                MKTG 638 · 2026
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         THE QUESTION
+    ========================== -->
+
+    <section>
+
+        <h2>
+            The Business Question
+        </h2>
+
+        <p>
+            What factors drive product success and revenue across
+            an e-commerce customer base?
+        </p>
+
+        <p>
+            The project used SQL to investigate purchasing behavior,
+            product performance, discounts, ratings, revenue
+            efficiency, and regional payment preferences.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECT SNAPSHOT
+    ========================== -->
+
+    <section id="project-snapshot">
+
+        <h2>
+            Project Snapshot
+        </h2>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Dataset
+                </h3>
+
+                <p>
+                    Simulated Amazon-style e-commerce sales data
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Orders
+                </h3>
+
+                <p>
+                    50,000 transactions
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <h3>
+                    Business Questions
+                </h3>
+
+                <p>
+                    5 SQL-driven research questions
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANALYTICAL APPROACH
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Analytical Approach
+        </h2>
+
+        <p>
+            The analysis moved from transaction-level filtering and
+            aggregation to statistical testing and regional ranking,
+            then translated the results into marketing recommendations.
+        </p>
+
+
+        <div class="project-card">
+
+            <h3>
+                01 · Filter
+            </h3>
+
+            <p>
+                Isolated relevant transactions and customer groups
+                using SQL WHERE conditions.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                02 · Aggregate
+            </h3>
+
+            <p>
+                Used COUNT(), AVG(), MIN(), MAX(), SUM(), and
+                STDDEV() to summarize purchasing and revenue behavior.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                03 · Compare
+            </h3>
+
+            <p>
+                Created rating categories, compared revenue across
+                product groups, and examined relationships between
+                discounts and quantity sold.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                04 · Rank
+            </h3>
+
+            <p>
+                Used a subquery and RANK() OVER(PARTITION BY ...)
+                to compare payment-method preferences within each
+                customer region.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>
+                05 · Translate
+            </h3>
+
+            <p>
+                Connected database findings to promotional,
+                segmentation, cross-selling, and regional marketing
+                strategies.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANALYSIS 01
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Analysis 01
+        </h2>
+
+        <p>
+            <strong>
+                Do discounts drive larger purchase quantities?
+            </strong>
+        </p>
+
+        <p>
+            Purchasing behavior was analyzed using descriptive
+            statistics and the correlation between discount
+            percentage and quantity sold.
+        </p>
+
+
+        <img
+            src="../images/database-marketing/discount-analysis.png"
+            alt="SQL analysis of discount percentage and quantity sold"
+            class="case-study-image"
+        >
+
+
+        <div class="project-card">
+
+            <h3>
+                Key Finding
+            </h3>
+
+            <p>
+                The analysis found a correlation of approximately
+                0.0014 between discount percentage and quantity sold,
+                indicating essentially no meaningful linear relationship
+                in the analyzed dataset.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANALYSIS 02
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Analysis 02
+        </h2>
+
+        <p>
+            <strong>
+                Do higher product ratings correspond to higher revenue?
+            </strong>
+        </p>
+
+        <p>
+            Numerical ratings were transformed into three categories:
+            Excellent, Good, and Poor. Revenue and order volume were
+            then compared across the groups.
+        </p>
+
+
+        <img
+            src="../images/database-marketing/ratings-revenue.png"
+            alt="SQL analysis comparing product ratings and revenue"
+            class="case-study-image"
+        >
+
+
+        <div class="project-card">
+
+            <h3>
+                Key Finding
+            </h3>
+
+            <p>
+                Average revenue per order differed by less than 1%
+                across the rating groups, suggesting that rating
+                level alone was not a strong differentiator of
+                average order revenue in this dataset.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANALYSIS 03
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Analysis 03
+        </h2>
+
+        <p>
+            <strong>
+                Which payment methods are preferred by region?
+            </strong>
+        </p>
+
+        <p>
+            Order counts were grouped by customer region and payment
+            method, then ranked within each region using a SQL window
+            function.
+        </p>
+
+
+        <img
+            src="../images/database-marketing/regional-payments.png"
+            alt="SQL ranking of payment methods by customer region"
+            class="case-study-image"
+        >
+
+
+        <div class="project-card">
+
+            <h3>
+                Key Finding
+            </h3>
+
+            <p>
+                The analysis showed different leading payment methods
+                across regions, including wallet in North America,
+                UPI in Asia, debit card in Europe, and cash on delivery
+                in the Middle East.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANALYSIS 04
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Analysis 04
+        </h2>
+
+        <p>
+            <strong>
+                Which product categories generate strong revenue
+                efficiency?
+            </strong>
+        </p>
+
+        <p>
+            Average revenue per order was calculated by product
+            category and filtered using a performance threshold.
+        </p>
+
+
+        <img
+            src="../images/database-marketing/revenue-efficiency.png"
+            alt="SQL analysis of average revenue per order by product category"
+            class="case-study-image"
+        >
+
+
+        <div class="project-card">
+
+            <h3>
+                Key Finding
+            </h3>
+
+            <p>
+                All analyzed product categories exceeded the
+                $300 average-revenue-per-order threshold, with
+                relatively similar performance across categories.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         KEY FINDINGS
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Key Findings
+        </h2>
+
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <h3>
+                    Discounts did not meaningfully increase quantity
+                </h3>
+
+                <p>
+                    The near-zero correlation between discount
+                    percentage and quantity sold suggests that
+                    broader discounting was not strongly associated
+                    with larger purchase quantities.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Ratings alone were not a major revenue differentiator
+                </h3>
+
+                <p>
+                    Average revenue per order was highly similar
+                    across the Excellent, Good, and Poor rating
+                    categories.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Revenue performance was diversified
+                </h3>
+
+                <p>
+                    Average revenue per order was relatively balanced
+                    across product categories rather than concentrated
+                    in one dominant category.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Payment behavior varied by region
+                </h3>
+
+                <p>
+                    Regional ranking showed different payment-method
+                    preferences, supporting localized checkout and
+                    promotional considerations.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MARKETING IMPLICATIONS
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Marketing Implications
+        </h2>
+
+        <p>
+            The analysis translated the database findings into
+            several marketing actions.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <h3>
+                    Targeted Promotions
+                </h3>
+
+                <p>
+                    Favor demand-driven and targeted promotions
+                    over assuming that broader discounts will
+                    increase order quantities.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Performance-Based Segmentation
+                </h3>
+
+                <p>
+                    Combine ratings with stronger performance
+                    indicators rather than using rating as a
+                    standalone segmentation variable.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Cross-Selling &amp; Bundling
+                </h3>
+
+                <p>
+                    Use the balanced product mix as an opportunity
+                    for upselling, bundling, and targeted
+                    cross-selling.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Regional Payment Strategy
+                </h3>
+
+                <p>
+                    Adapt checkout and promotional strategies
+                    according to payment preferences within each
+                    customer region.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SQL TOOLKIT
+    ========================== -->
+
+    <section>
+
+        <h2>
+            SQL Toolkit
+        </h2>
+
+
+        <div class="project-tags">
+
+            <span class="project-tag">SELECT</span>
+
+            <span class="project-tag">WHERE</span>
+
+            <span class="project-tag">CASE</span>
+
+            <span class="project-tag">GROUP BY</span>
+
+            <span class="project-tag">HAVING</span>
+
+            <span class="project-tag">AVG()</span>
+
+            <span class="project-tag">COUNT()</span>
+
+            <span class="project-tag">SUM()</span>
+
+            <span class="project-tag">STDDEV()</span>
+
+            <span class="project-tag">CORR()</span>
+
+            <span class="project-tag">RANK()</span>
+
+            <span class="project-tag">PARTITION BY</span>
+
+            <span class="project-tag">Subqueries</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Skills Demonstrated
+        </h2>
+
+
+        <div class="project-tags">
+
+            <span class="project-tag">
+                SQL
+            </span>
+
+            <span class="project-tag">
+                Database Marketing
+            </span>
+
+            <span class="project-tag">
+                Customer Analytics
+            </span>
+
+            <span class="project-tag">
+                E-Commerce Analytics
+            </span>
+
+            <span class="project-tag">
+                Revenue Analysis
+            </span>
+
+            <span class="project-tag">
+                Statistical Analysis
+            </span>
+
+            <span class="project-tag">
+                Regional Analysis
+            </span>
+
+            <span class="project-tag">
+                Marketing Strategy
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORIGINAL PROJECT
+    ========================== -->
+
+    <section>
+
+        <h2>
+            Original Project
+        </h2>
+
+        <p>
+            View the original presentation for the complete
+            SQL analysis, findings, and recommendations.
+        </p>
+
+        <div class="case-study-action">
+
+            <a
+                class="btn"
+                href="../documents/database-marketing/"
+                target="_blank"
+                rel="noopener"
+            >
+                View Presentation
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BACK TO PROJECTS
+    ========================== -->
+
+    <section>
+
+        <div class="case-study-action">
+
+            <a
+                class="btn"
+                href="../index.html#projects"
+            >
+                ← Back to All Projects
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Ruchi Patel · Marketing Portfolio
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
