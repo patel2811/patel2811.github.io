@@ -1080,3 +1080,26 @@ body:has(.dashboard-showcase) .project-grid .project-card {
     }
 
 }
+/* =========================================================
+   CASE STUDY ACTION BUTTON ALIGNMENT
+   ========================================================= */
+
+.case-study-action {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 28px auto 0;
+}
+
+
+/* Keep the button itself compact */
+.case-study-action .btn {
+    width: fit-content;
+    margin-top: 0;
+}
+
+
+/* Back button spacing */
+section:last-of-type .case-study-action {
+    margin-top: 0;
+}
