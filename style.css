@@ -2245,3 +2245,359 @@ p,
 .nav-logo {
     font-size: clamp(0.82rem, 0.25vw + 0.74rem, 1rem);
 }
+
+/* =========================================================
+   FLUID LAYOUT SYSTEM
+   Spacing and margins scale with browser width
+   ========================================================= */
+
+:root {
+    /*
+       Horizontal page gutter:
+       - smaller on narrow screens
+       - larger on wide screens
+       - never too small or too large
+    */
+    --page-gutter: clamp(20px, 5.5vw, 88px);
+
+    /*
+       Main content width:
+       prevents text from stretching too far on very
+       wide monitors
+    */
+    --content-width: min(1080px, calc(100vw - (2 * var(--page-gutter))));
+
+    /*
+       Larger content width for homepage sections
+    */
+    --wide-content-width: min(
+        1180px,
+        calc(100vw - (2 * var(--page-gutter)))
+    );
+
+    /*
+       Fluid vertical section spacing
+    */
+    --section-space: clamp(58px, 7vw, 100px);
+
+    /*
+       Fluid card spacing
+    */
+    --card-gap: clamp(18px, 2vw, 30px);
+
+    /*
+       Fluid internal card padding
+    */
+    --card-padding: clamp(20px, 2.4vw, 30px);
+}
+
+
+/* =========================================================
+   GLOBAL SECTION SPACING
+   ========================================================= */
+
+section {
+    padding-top: var(--section-space);
+    padding-bottom: var(--section-space);
+}
+
+
+/* =========================================================
+   GLOBAL CONTENT WIDTH
+   ========================================================= */
+
+section > *,
+.section-heading,
+.section-intro,
+.about-content,
+.projects-footer,
+.contact-content {
+    width: var(--content-width);
+
+    max-width: 1080px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Wide grids can use more space */
+
+.project-grid,
+.skills-grid,
+.capabilities-grid,
+.education-grid,
+.experience-track {
+    width: var(--wide-content-width);
+
+    max-width: 1180px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
+
+.home-hero {
+    padding-top: clamp(60px, 7vw, 90px);
+    padding-bottom: clamp(60px, 7vw, 90px);
+}
+
+
+.home-hero .hero-content {
+    width: var(--wide-content-width);
+
+    max-width: 1180px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    gap: clamp(35px, 5vw, 75px);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.home-hero .headshot-frame {
+    width: clamp(260px, 30vw, 390px);
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.home-hero .hero-actions {
+    gap: clamp(14px, 1.8vw, 22px);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-content {
+    gap: clamp(35px, 5vw, 70px);
+}
+
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.capabilities-grid {
+    gap: var(--card-gap);
+}
+
+
+.capability-card {
+    padding: var(--card-padding);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-section .timeline {
+    width: var(--content-width);
+
+    max-width: 900px;
+
+    padding-left: clamp(38px, 4vw, 48px);
+}
+
+
+.experience-section .timeline-item {
+    margin-bottom: clamp(36px, 4vw, 46px);
+}
+
+
+/* =========================================================
+   HOMEPAGE PROJECTS
+   ========================================================= */
+
+.homepage-project-grid {
+    width: var(--wide-content-width);
+
+    max-width: 1180px;
+
+    gap: var(--card-gap);
+}
+
+
+.homepage-project-card {
+    padding: var(--card-padding);
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-grid {
+    gap: var(--card-gap);
+}
+
+
+.education-card {
+    padding: var(--card-padding);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-section {
+    padding-top: clamp(65px, 8vw, 110px);
+    padding-bottom: clamp(65px, 8vw, 110px);
+}
+
+
+/* =========================================================
+   CASE STUDY PAGES
+   ========================================================= */
+
+body:has(.case-study-image) .hero {
+    padding-top: clamp(65px, 7vw, 90px);
+    padding-bottom: clamp(65px, 7vw, 90px);
+}
+
+
+/* Case-study content */
+
+body:has(.case-study-image) section > *,
+body:has(.case-study-image) .dashboard-showcase > * {
+    width: var(--content-width);
+
+    max-width: 1080px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Case-study grids */
+
+body:has(.case-study-image) .project-grid,
+body:has(.case-study-image) .skills-grid {
+    width: var(--wide-content-width);
+
+    max-width: 1180px;
+
+    gap: var(--card-gap);
+}
+
+
+/* Case-study cards */
+
+body:has(.case-study-image) .project-card,
+body:has(.case-study-image) .skill-card {
+    padding: var(--card-padding);
+}
+
+
+/* Case-study images */
+
+body:has(.case-study-image) .case-study-image {
+    width: var(--content-width);
+
+    max-width: 1080px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: clamp(28px, 3vw, 42px);
+}
+
+
+/* Featured dashboard */
+
+body:has(.dashboard-showcase) .dashboard-image {
+    width: var(--content-width);
+
+    max-width: 1150px;
+}
+
+
+/* =========================================================
+   BUTTON SPACING
+   ========================================================= */
+
+.case-study-action {
+    width: var(--content-width);
+
+    max-width: 1080px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    gap: clamp(10px, 1.5vw, 16px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --page-gutter: 18px;
+    }
+
+
+    section {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+
+    section > *,
+    .section-heading,
+    .section-intro,
+    .about-content,
+    .projects-footer,
+    .contact-content,
+    .experience-section .timeline,
+    .case-study-action {
+        width: calc(100vw - (2 * var(--page-gutter)));
+
+        max-width: none;
+    }
+
+
+    .project-grid,
+    .skills-grid,
+    .capabilities-grid,
+    .education-grid,
+    .experience-track,
+    .homepage-project-grid {
+        width: calc(100vw - (2 * var(--page-gutter)));
+
+        max-width: none;
+    }
+
+
+    .home-hero .hero-content {
+        width: calc(100vw - (2 * var(--page-gutter)));
+
+        max-width: none;
+    }
+
+
+    body:has(.case-study-image) section > *,
+    body:has(.case-study-image) .dashboard-showcase > *,
+    body:has(.case-study-image) .case-study-image {
+        width: calc(100vw - (2 * var(--page-gutter)));
+
+        max-width: none;
+    }
+
+}
