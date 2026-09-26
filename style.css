@@ -840,3 +840,139 @@ section .project-card + .project-card {
         padding: 8px;
     }
 }
+/* =========================================================
+   CASE STUDY LAYOUT REFINEMENT
+   Consistent alignment, spacing and readable text width
+   ========================================================= */
+
+/* Keep regular case-study content aligned to one grid */
+body:has(.dashboard-showcase) section:not(.dashboard-showcase) > h2,
+body:has(.dashboard-showcase) section:not(.dashboard-showcase) > p,
+body:has(.dashboard-showcase) section:not(.dashboard-showcase) > .project-tags {
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Section headings */
+body:has(.dashboard-showcase) section > h2 {
+    margin-bottom: 18px;
+}
+
+
+/* Paragraph spacing */
+body:has(.dashboard-showcase) section > p {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+
+/* Keep descriptive text from becoming excessively wide */
+body:has(.dashboard-showcase) section:not(.dashboard-showcase) > p {
+    line-height: 1.75;
+}
+
+
+/* Give images breathing room after their descriptions */
+body:has(.dashboard-showcase) .case-study-image {
+    margin-top: 34px;
+}
+
+
+/* Add separation between an image and the insight card below */
+body:has(.dashboard-showcase) .case-study-image + .project-card {
+    margin-top: 32px;
+}
+
+
+/* =========================================
+   FEATURED DASHBOARD
+   ========================================= */
+
+.dashboard-showcase > .eyebrow,
+.dashboard-showcase > h2,
+.dashboard-showcase > p {
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Fix the dashboard heading width/alignment */
+.dashboard-showcase > h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+}
+
+
+/* Dashboard description */
+.dashboard-showcase > p:not(.eyebrow) {
+    max-width: 1080px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: 1.75;
+}
+
+
+/* Eyebrow sits directly above heading */
+.dashboard-showcase > .eyebrow {
+    margin-bottom: 14px;
+}
+
+
+/* Dashboard itself */
+.dashboard-showcase .dashboard-image {
+    margin-top: 42px;
+}
+
+
+/* =========================================
+   VISUALIZATION SECTIONS
+   ========================================= */
+
+/* Keep visualization titles and descriptions
+   aligned with their images */
+body:has(.dashboard-showcase) section > .case-study-image {
+    width: calc(100% - 40px);
+    max-width: 1080px;
+}
+
+
+/* Smaller descriptive subtitle below Visualization 01, etc. */
+body:has(.dashboard-showcase) section > h2 + p strong {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    body:has(.dashboard-showcase) section > .case-study-image {
+        width: 100%;
+    }
+
+    .dashboard-showcase > h2 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+}
