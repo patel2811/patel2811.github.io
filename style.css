@@ -709,3 +709,134 @@ li {
         animation: none !important;
     }
 }
+/* =========================================================
+   CASE STUDY VISUALS
+   ========================================================= */
+
+.case-study-image {
+    display: block;
+
+    width: 100%;
+    max-width: 1050px;
+
+    height: auto;
+
+    margin: 42px auto 0;
+
+    padding: 12px;
+
+    background: var(--white);
+
+    border: 1px solid var(--blue-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: 0 16px 40px rgba(16, 42, 67, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.case-study-image:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 22px 50px rgba(16, 42, 67, 0.14);
+}
+
+
+/* ---------- Featured Dashboard ---------- */
+
+.dashboard-showcase {
+    background:
+        linear-gradient(
+            135deg,
+            #f7fbff 0%,
+            #eef6fc 100%
+        );
+}
+
+.dashboard-showcase h2 {
+    margin-bottom: 18px;
+}
+
+.dashboard-showcase p {
+    max-width: 760px;
+}
+
+.dashboard-image {
+    max-width: 1150px;
+
+    padding: 16px;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        0 24px 60px rgba(16, 42, 67, 0.14);
+}
+
+
+/* ---------- Small Labels ---------- */
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: var(--blue);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/* ---------- Case Study Cards ---------- */
+
+.case-study-card {
+    max-width: 900px;
+
+    margin: 28px auto 0;
+
+    padding: 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ---------- Case Study Section Spacing ---------- */
+
+#project-snapshot .skills-grid {
+    margin-top: 35px;
+}
+
+#calculated-fields .project-card {
+    margin-top: 22px;
+}
+
+section .project-card + .project-card {
+    margin-top: 20px;
+}
+
+
+/* ---------- Responsive Case Study Images ---------- */
+
+@media (max-width: 700px) {
+
+    .case-study-image {
+        margin-top: 28px;
+
+        padding: 7px;
+
+        border-radius: 14px;
+    }
+
+    .dashboard-image {
+        padding: 8px;
+    }
+}
