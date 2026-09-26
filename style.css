@@ -1103,3 +1103,16 @@ body:has(.dashboard-showcase) .project-grid .project-card {
 section:last-of-type .case-study-action {
     margin-top: 0;
 }
+
+/* Multiple case-study deliverable buttons */
+
+.case-study-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
+.case-study-action .btn {
+    margin: 0;
+}
