@@ -1024,3 +1024,59 @@ body:has(.dashboard-showcase) section:not(#projects) > .project-card {
     }
 
 }
+/* =========================================================
+   CASE STUDY GRID ALIGNMENT
+   Make all cards share the same left/right margins
+   ========================================================= */
+
+body:has(.dashboard-showcase) .project-grid,
+body:has(.dashboard-showcase) .skills-grid {
+    width: 100%;
+    max-width: 1080px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Keep the spacing between grid cards consistent */
+body:has(.dashboard-showcase) .project-grid {
+    column-gap: 28px;
+    row-gap: 28px;
+}
+
+
+/* Project Snapshot cards */
+body:has(.dashboard-showcase) #project-snapshot .skills-grid {
+    margin-top: 35px;
+}
+
+
+/* Key Findings / Business Implications cards */
+body:has(.dashboard-showcase) section > .project-grid {
+    margin-top: 38px;
+}
+
+
+/* Make the cards themselves fill their grid columns */
+body:has(.dashboard-showcase) .project-grid .project-card,
+body:has(.dashboard-showcase) .skills-grid .skill-card {
+    width: 100%;
+}
+
+
+/* Keep card padding visually consistent */
+body:has(.dashboard-showcase) .project-grid .project-card {
+    padding: 28px 30px;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    body:has(.dashboard-showcase) .project-grid,
+    body:has(.dashboard-showcase) .skills-grid {
+        width: 100%;
+    }
+
+}
