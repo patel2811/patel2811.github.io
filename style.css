@@ -2204,3 +2204,89 @@ body:has(.case-study-image) .skill-card p {
     }
 
 }
+/* =========================================================
+   CASE STUDY PROJECT NAVIGATION
+   ========================================================= */
+
+.project-navigation {
+    width: var(--content-width);
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.project-navigation-all {
+    color: var(--text-soft);
+
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.project-navigation-all:hover {
+    color: var(--blue);
+}
+
+.project-navigation-next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    color: var(--navy);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    text-align: right;
+}
+
+.project-navigation-next span {
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+}
+
+.project-navigation-next:hover {
+    color: var(--blue);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .project-navigation {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 24px;
+    }
+
+    .project-navigation-next {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+}
