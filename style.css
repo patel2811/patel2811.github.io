@@ -2061,3 +2061,146 @@ body:has(.case-study-image) .skill-card p {
     }
 
 }
+/* =========================================================
+   CASE STUDY HERO REFINEMENT
+   ========================================================= */
+
+.case-study-hero {
+    min-height: clamp(500px, 58vh, 620px);
+    padding:
+        clamp(60px, 7vw, 88px)
+        0;
+}
+
+.case-study-hero > div {
+    width: var(--content-width);
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: var(--blue);
+}
+
+.case-study-hero .eyebrow {
+    margin-bottom: 12px;
+}
+
+.case-study-hero .project-tags {
+    margin-bottom: 18px;
+}
+
+.case-study-hero h1 {
+    max-width: 900px;
+
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(3rem, 5vw, 4.7rem);
+
+    line-height: 1.04;
+}
+
+.case-study-hero-lede {
+    max-width: 760px;
+
+    margin-bottom: 34px;
+
+    font-size:
+        clamp(1rem, 0.35vw + 0.9rem, 1.12rem);
+
+    line-height: 1.75;
+}
+
+.case-study-meta {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 0;
+
+    max-width: 900px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid var(--blue-border);
+}
+
+.case-study-meta > div {
+    padding-right: 24px;
+
+    border-right:
+        1px solid var(--blue-border);
+}
+
+.case-study-meta > div:not(:first-child) {
+    padding-left: 24px;
+}
+
+.case-study-meta > div:last-child {
+    border-right: none;
+}
+
+.case-study-meta span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text-soft);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.case-study-meta strong {
+    color: var(--navy);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+
+    .case-study-hero {
+        min-height: auto;
+    }
+
+    .case-study-meta {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        row-gap: 20px;
+    }
+
+    .case-study-meta > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .case-study-meta > div:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .case-study-meta > div:nth-child(4) {
+        border-right: none;
+    }
+
+}
