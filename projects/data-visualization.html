@@ -2,281 +2,394 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
         content="Ruchi Patel — California Employment & Wage Trends Tableau case study."
     >
 
-    <title>California Employment & Wage Trends | Ruchi Patel</title>
+    <title>
+        California Employment & Wage Trends | Ruchi Patel
+    </title>
 
     <link rel="stylesheet" href="../style.css">
+
 </head>
 
 
 <body>
 
-    <!-- =========================
+
+    <!-- =====================================================
          NAVIGATION
-    ========================== -->
+    ====================================================== -->
 
-    <nav>
+    <nav class="site-nav">
 
-        <div>
-            <strong>Ruchi Patel</strong>
+        <a
+            href="../index.html"
+            class="nav-logo"
+        >
+            Ruchi Patel
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#experience">
+                Experience
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#education">
+                Education
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
         </div>
 
-        <div>
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#experience">Experience</a>
-            <a href="../index.html#projects">Projects</a>
-            <a href="../index.html#education">Education</a>
-            <a href="../index.html#contact">Contact</a>
-        </div>
+
+        <a
+            href="../Ruchi%20Patel_Resume.pdf"
+            class="nav-resume"
+            target="_blank"
+            rel="noopener"
+        >
+            View Résumé
+        </a>
 
     </nav>
 
 
-    <!-- =========================
-         CASE STUDY HERO
-    ========================== -->
 
-   <header class="hero case-study-hero">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-    <div>
+    <header class="hero case-study-hero">
 
-        <a
-            href="../index.html#projects"
-            class="back-link"
-        >
-            ← Back to Projects
-        </a>
+        <div>
+
+            <a
+                href="../index.html#projects"
+                class="back-link"
+            >
+                ← Back to Projects
+            </a>
+
+
+            <p class="eyebrow">
+                PROJECT 01 · DATA VISUALIZATION
+            </p>
+
+
+            <div class="project-tags">
+
+                <span class="project-tag">
+                    Tableau
+                </span>
+
+                <span class="project-tag">
+                    Workforce Analytics
+                </span>
+
+                <span class="project-tag">
+                    Data Storytelling
+                </span>
+
+            </div>
+
+
+            <h1>
+                California Employment
+                &amp; Wage Trends
+            </h1>
+
+
+            <p class="case-study-hero-lede">
+                A 2020–2025 analysis of employment demand,
+                wage growth, occupation trends, and geographic
+                differences across California.
+            </p>
+
+
+            <div class="case-study-meta">
+
+
+                <div>
+
+                    <span>
+                        Dataset
+                    </span>
+
+                    <strong>
+                        OEWS
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Period
+                    </span>
+
+                    <strong>
+                        2020–2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Scope
+                    </span>
+
+                    <strong>
+                        22 occupation groups
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Tool
+                    </span>
+
+                    <strong>
+                        Tableau
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         01 / THE QUESTION
+    ====================================================== -->
+
+    <section>
 
         <p class="eyebrow">
-            PROJECT 01 · DATA VISUALIZATION
+            01 / THE QUESTION
         </p>
 
-        <div class="project-tags">
-
-            <span class="project-tag">
-                Tableau
-            </span>
-
-            <span class="project-tag">
-                Workforce Analytics
-            </span>
-
-        </div>
-
-        <h1>
-            California Employment
-            &amp; Wage Trends
-        </h1>
-
-        <p class="case-study-hero-lede">
-            A 2020–2025 analysis of employment demand,
-            wage growth, occupation trends, and geographic
-            differences across California.
-        </p>
-
-        <div class="case-study-meta">
-
-            <div>
-                <span>Dataset</span>
-                <strong>OEWS</strong>
-            </div>
-
-            <div>
-                <span>Period</span>
-                <strong>2020–2025</strong>
-            </div>
-
-            <div>
-                <span>Scope</span>
-                <strong>22 occupation groups</strong>
-            </div>
-
-            <div>
-                <span>Tool</span>
-                <strong>Tableau</strong>
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-    <!-- =========================
-         PROJECT OVERVIEW
-    ========================== -->
-
-    <section>
 
         <h2>
-            The Question
+            Do employment growth
+            and wage growth move together?
         </h2>
 
-        <p>
-            Do high-growth occupations experience corresponding
-            wage increases between 2020 and 2025?
-        </p>
 
         <p>
-            The project examined employment and wage trends across
-            California occupation groups and geographic markets,
-            using the Occupational Employment and Wage Statistics
-            dataset.
+            The project examined employment and wage trends
+            across California occupation groups to investigate
+            whether high-growth occupations experienced
+            corresponding wage increases between 2020 and 2025.
+        </p>
+
+
+        <p>
+            The analysis used Occupational Employment and Wage
+            Statistics data to compare occupation-level and
+            geographic patterns.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         PROJECT SNAPSHOT
-    ========================== -->
 
-    <section id="project-snapshot">
+    <!-- =====================================================
+         02 / FEATURED OUTPUT
+    ====================================================== -->
+
+    <section class="dashboard-showcase">
+
+        <p class="eyebrow">
+            02 / FEATURED OUTPUT
+        </p>
+
 
         <h2>
-            Project Snapshot
+            Employment &amp; Wage
+            Analysis Dashboard
         </h2>
 
 
-        <div class="skills-grid">
+        <p>
+            The final Tableau dashboard brings together
+            occupational, geographic, employment, and wage
+            analyses into a single view.
+        </p>
 
 
-            <div class="skill-card">
+        <img
+            src="../images/data-visualization/tableau-dashboard.png"
+            alt="Final Tableau dashboard combining California employment and wage analysis"
+            class="case-study-image dashboard-image"
+        >
+
+    </section>
+
+
+
+    <!-- =====================================================
+         03 / APPROACH
+    ====================================================== -->
+
+    <section>
+
+        <p class="eyebrow">
+            03 / APPROACH
+        </p>
+
+
+        <h2>
+            Building comparable measures
+        </h2>
+
+
+        <p>
+            The analysis established a 2020 baseline and then
+            normalized employment and wage changes so occupation
+            groups could be compared on a common scale.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <article class="project-card">
 
                 <h3>
-                    Dataset
+                    01 · Establish a baseline
                 </h3>
 
                 <p>
-                    Occupational Employment &amp; Wage Statistics
-                    (OEWS)
+                    Created fixed 2020 employment and wage
+                    values for each occupation group.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="skill-card">
+            <article class="project-card">
 
                 <h3>
-                    Time Period
+                    02 · Normalize the change
                 </h3>
 
                 <p>
-                    2020–2025
+                    Converted differences from the 2020
+                    baseline into proportional changes.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="skill-card">
+            <article class="project-card">
 
                 <h3>
-                    Scope
+                    03 · Compare occupation groups
                 </h3>
 
                 <p>
-                    22 occupation groups across California
+                    Examined employment and wage movement
+                    across selected occupation groups.
                 </p>
 
-            </div>
+            </article>
 
+
+            <article class="project-card">
+
+                <h3>
+                    04 · Add geographic context
+                </h3>
+
+                <p>
+                    Used geographic visualization to compare
+                    California locations and regional patterns.
+                </p>
+
+            </article>
 
         </div>
 
     </section>
 
-<!-- =========================
-     FEATURED DASHBOARD
-========================== -->
 
-<section class="dashboard-showcase">
 
-    <p class="eyebrow">
-        FINAL DASHBOARD
-    </p>
-
-    <h2>
-        Employment &amp; Wage Analysis Dashboard
-    </h2>
-
-    <p>
-        The final Tableau dashboard brings together occupational,
-        geographic, employment, and wage analyses into a single
-        interactive view.
-    </p>
-
-    <img
-        src="../images/data-visualization/tableau-dashboard.png"
-        alt="Final Tableau dashboard combining California employment and wage analysis"
-        class="case-study-image dashboard-image"
-    >
-
-</section>
-    <!-- =========================
-         APPROACH
-    ========================== -->
+    <!-- =====================================================
+         04 / ANALYSIS 01
+    ====================================================== -->
 
     <section>
 
-        <h2>
-            Analytical Approach
-        </h2>
-
-        <p>
-            The analysis began by establishing 2020 as a
-            baseline year for employment and wages. Calculated
-            fields were then created in Tableau to measure
-            normalized changes relative to that baseline.
+        <p class="eyebrow">
+            04 / ANALYSIS 01
         </p>
 
-        <div class="project-card">
 
-            <h3>
-                01 · Establish a Baseline
-            </h3>
-
-            <p>
-                Created fixed 2020 employment and wage values
-                for each occupation group.
-            </p>
-
-        </div>
+        <h2>
+            Employment &amp; Wage Trends
+        </h2>
 
 
-        <div class="project-card">
+        <p>
+            A dual-axis Tableau visualization compared
+            employment and wage trends over the 2020–2025
+            period.
+        </p>
 
-            <h3>
-                02 · Normalize the Change
-            </h3>
 
-            <p>
-                Converted employment and wage differences into
-                proportional changes so occupation groups could
-                be compared on the same scale.
-            </p>
-
-        </div>
+        <img
+            src="../images/data-visualization/employment-wage-trend.png"
+            alt="Tableau visualization comparing California employment and wage trends from 2020 to 2025"
+            class="case-study-image"
+        >
 
 
         <div class="project-card">
 
             <h3>
-                03 · Visualize the Relationship
+                What to notice
             </h3>
 
             <p>
-                Built Tableau visualizations using trend lines,
-                normalized comparisons, highlighting, and
-                geographic mapping.
+                Employment and wage movements were not uniform
+                across occupations. The analysis showed periods
+                of volatility and different patterns of change
+                across occupation groups.
             </p>
 
         </div>
@@ -284,130 +397,36 @@
     </section>
 
 
-    <!-- =========================
-         CALCULATED FIELDS
-    ========================== -->
 
-    <section id="calculated-fields">
-
-        <h2>
-            Building Comparable Measures
-        </h2>
-
-        <p>
-            Two calculated fields established the 2020 baseline
-            for each occupation group. Additional normalized
-            measures converted the five-year changes into
-            comparable percentages.
-        </p>
-
-
-        <div class="project-card">
-
-            <h3>
-                Base Year
-            </h3>
-
-            <p>
-                The Tableau calculations use a FIXED expression
-                by occupation group and return the average
-                employment or wage value for 2020.
-            </p>
-
-        </div>
-
-
-        <div class="project-card">
-
-            <h3>
-                Normalized Change
-            </h3>
-
-            <p>
-                The normalized measures compare the current value
-                against the 2020 base year and express the result
-                as a relative change.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         VISUALIZATION 1
-    ========================== -->
+    <!-- =====================================================
+         05 / ANALYSIS 02
+    ====================================================== -->
 
     <section>
 
-        <h2>
-            Visualization 01
-        </h2>
-
-        <p>
-            <strong>
-                Employment &amp; Wage Relationship, 2020–2025
-            </strong>
+        <p class="eyebrow">
+            05 / ANALYSIS 02
         </p>
 
-        <p>
-            A dual-axis Tableau line chart was used to compare
-            employment and wage trends over time. Employment and
-            wage measures were placed on synchronized axes and
-            filtered to the 2020–2025 period.
-        </p>
- <img
-        src="../images/data-visualization/employment-wage-trend.png"
-        alt="Tableau visualization comparing California employment and wage trends from 2020 to 2025"
-        class="case-study-image"
-    >
-
-        <div class="project-card">
-
-            <h3>
-                What this visualization shows
-            </h3>
-
-            <p>
-                Employment and wage movements did not behave
-                uniformly throughout the period. The 2020–2022
-                period showed substantial volatility, while
-                several occupations displayed a more consistent
-                relationship after 2022.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         VISUALIZATION 2
-    ========================== -->
-
-    <section>
 
         <h2>
-            Visualization 02
+            Normalized Wage vs.
+            Employment Growth
         </h2>
 
-        <p>
-            <strong>
-                Wage vs. Employment Growth Across Occupations
-            </strong>
-        </p>
 
         <p>
             Normalized employment and wage changes were compared
             across selected STEM and healthcare occupation groups.
-            A zero reference line made it easier to distinguish
-            growth from decline.
         </p>
-<img
-    src="../images/data-visualization/normalized-growth.png"
-    alt="Tableau visualization comparing normalized wage and employment growth across occupation groups"
-    class="case-study-image"
->
+
+
+        <img
+            src="../images/data-visualization/normalized-growth.png"
+            alt="Tableau visualization comparing normalized wage and employment growth across occupation groups"
+            class="case-study-image"
+        >
+
 
         <div class="project-card">
 
@@ -416,11 +435,10 @@
             </h3>
 
             <p>
-                Occupation groups differ significantly in their
+                Occupation groups differ substantially in their
                 absolute employment and wage levels. Normalization
-                allowed the project to compare the direction and
-                magnitude of change rather than simply comparing
-                raw values.
+                made it possible to compare the direction and
+                magnitude of change rather than raw values alone.
             </p>
 
         </div>
@@ -428,44 +446,47 @@
     </section>
 
 
-    <!-- =========================
-         VISUALIZATION 3
-    ========================== -->
+
+    <!-- =====================================================
+         06 / ANALYSIS 03
+    ====================================================== -->
 
     <section>
 
+        <p class="eyebrow">
+            06 / ANALYSIS 03
+        </p>
+
+
         <h2>
-            Visualization 03
+            California Geographic Analysis
         </h2>
 
-        <p>
-            <strong>
-                California Geographic Analysis
-            </strong>
-        </p>
 
         <p>
-            A geographic Tableau visualization mapped California
-            locations using wage and employment measures. Wage
-            was represented through color while employment
-            influenced the size of the geographic marks.
+            A geographic Tableau visualization was used to
+            examine regional differences in employment and
+            wage patterns across California.
         </p>
-<img
-    src="../images/data-visualization/california-map.png"
-    alt="Tableau geographic visualization of employment and wage patterns across California"
-    class="case-study-image"
->
+
+
+        <img
+            src="../images/data-visualization/california-map.png"
+            alt="Tableau geographic visualization of employment and wage patterns across California"
+            class="case-study-image"
+        >
+
 
         <div class="project-card">
 
             <h3>
-                Geographic insight
+                Geographic perspective
             </h3>
 
             <p>
-                The geographic view made regional differences in
-                employment and wage levels easier to identify and
-                compare.
+                The map added geographic context to the
+                occupation-level analysis and made regional
+                differences easier to compare visually.
             </p>
 
         </div>
@@ -473,242 +494,339 @@
     </section>
 
 
-    <!-- =========================
-         KEY FINDINGS
-    ========================== -->
+
+    <!-- =====================================================
+         07 / KEY FINDINGS
+    ====================================================== -->
 
     <section>
 
+        <p class="eyebrow">
+            07 / KEY FINDINGS
+        </p>
+
+
         <h2>
-            Key Findings
+            What the data showed
         </h2>
 
 
         <div class="project-grid">
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
-                    Employment &amp; wages did not always move together
+                    Employment ≠ wages
                 </h3>
 
                 <p>
-                    Many occupation groups did not demonstrate
-                    parallel growth in employment and wages during
-                    2020–2025.
+                    Employment and wage growth did not
+                    consistently move together across
+                    occupation groups.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
-                    Post-2022 patterns were more consistent
+                    Patterns varied over time
                 </h3>
 
                 <p>
-                    Several occupations showed a more positive
-                    employment-and-wage relationship during
-                    2023–2025.
+                    The project observed substantial movement
+                    during the earlier part of the period,
+                    with several occupations showing more
+                    consistent patterns later in the timeframe.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
-                    Healthcare Support was notable
+                    Healthcare Support stood out
                 </h3>
 
                 <p>
-                    Within the selected STEM and healthcare groups,
-                    Healthcare Support showed both rising normalized
-                    employment and rising normalized wages.
+                    Among the selected STEM and healthcare groups,
+                    Healthcare Support showed increases in both
+                    normalized employment and wages.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
-                    Some wage gains occurred despite employment declines
+                    Wage growth can occur alongside decline
                 </h3>
 
                 <p>
-                    Several occupation groups showed wage growth
-                    even where employment declined, challenging the
-                    assumption that increasing demand automatically
-                    produces higher wages.
+                    Some occupation groups experienced wage growth
+                    even when employment declined, challenging a
+                    simple one-to-one relationship between demand
+                    and compensation.
                 </p>
 
-            </div>
-
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         BUSINESS IMPLICATIONS
-    ========================== -->
+
+    <!-- =====================================================
+         08 / BUSINESS IMPLICATIONS
+    ====================================================== -->
 
     <section>
 
-        <h2>
-            Business Implications
-        </h2>
-
-        <p>
-            The analysis suggested that workforce planning should
-            consider both employment and wage trends rather than
-            assuming that demand alone determines compensation.
+        <p class="eyebrow">
+            08 / BUSINESS IMPLICATIONS
         </p>
+
+
+        <h2>
+            From analysis to action
+        </h2>
 
 
         <div class="project-grid">
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
                     Recruitment &amp; Retention
                 </h3>
 
                 <p>
-                    Focus resources on occupations where both
-                    employment and wages are increasing.
+                    Focus attention on occupations where
+                    employment and wages are both increasing.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
-                    Upskilling
+                    Upskilling &amp; Role Design
                 </h3>
 
                 <p>
-                    Consider targeted upskilling and role redesign
-                    where wages rise while employment declines.
+                    Consider targeted upskilling or role
+                    redesign where wage growth occurs alongside
+                    declining employment.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="project-card">
+            <article class="project-card">
 
                 <h3>
                     Workforce Planning
                 </h3>
 
                 <p>
-                    Use multiple labor-market indicators when
-                    making hiring and compensation decisions.
+                    Use employment and wage trends together
+                    when evaluating workforce needs and
+                    compensation decisions.
                 </p>
 
-            </div>
+            </article>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================== -->
+
+    <!-- =====================================================
+         09 / SKILLS
+    ====================================================== -->
 
     <section>
 
+        <p class="eyebrow">
+            09 / SKILLS &amp; TOOLS
+        </p>
+
+
         <h2>
-            Skills Demonstrated
+            Skills demonstrated
         </h2>
 
 
         <div class="project-tags">
 
-            <span class="project-tag">Tableau</span>
+            <span class="project-tag">
+                Tableau
+            </span>
 
-            <span class="project-tag">Data Visualization</span>
+            <span class="project-tag">
+                Data Visualization
+            </span>
 
-            <span class="project-tag">Calculated Fields</span>
+            <span class="project-tag">
+                Calculated Fields
+            </span>
 
-            <span class="project-tag">LOD Expressions</span>
+            <span class="project-tag">
+                LOD Expressions
+            </span>
 
-            <span class="project-tag">Data Normalization</span>
+            <span class="project-tag">
+                Data Normalization
+            </span>
 
-            <span class="project-tag">Trend Analysis</span>
+            <span class="project-tag">
+                Trend Analysis
+            </span>
 
-            <span class="project-tag">Geographic Analysis</span>
+            <span class="project-tag">
+                Geographic Analysis
+            </span>
 
-            <span class="project-tag">Dashboard Design</span>
+            <span class="project-tag">
+                Dashboard Design
+            </span>
 
-            <span class="project-tag">Data Storytelling</span>
+            <span class="project-tag">
+                Data Storytelling
+            </span>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         ORIGINAL DELIVERABLE
-    ========================== -->
 
-   <section>
+    <!-- =====================================================
+         10 / ORIGINAL DELIVERABLE
+    ====================================================== -->
 
-    <h2>
-        Original Project
-    </h2>
+    <section>
 
-    <p>
-        View the original presentation for the complete analysis.
-    </p>
-
-    <div class="case-study-action">
-
-        <a
-            class="btn"
-            href="../documents/data-visualization/Gr6%20-%20Data%20Visualization%20Presentation.pdf"
-            target="_blank"
-            rel="noopener"
-        >
-            View Presentation
-        </a>
-
-    </div>
-
-</section>
+        <p class="eyebrow">
+            10 / ORIGINAL DELIVERABLE
+        </p>
 
 
-    <!-- =========================
-         BACK TO PROJECTS
-    ========================== -->
+        <h2>
+            Explore the original project
+        </h2>
 
-   <section>
 
-    <div class="case-study-action">
-        <a
-            class="btn"
-            href="../index.html#projects"
-        >
-            ← Back to All Projects
-        </a>
-    </div>
+        <p>
+            View the original presentation for the complete
+            project methodology, visualizations, findings,
+            and recommendations.
+        </p>
 
-</section>
 
-    <!-- =========================
+        <div class="case-study-action">
+
+            <a
+                class="btn"
+                href="../documents/data-visualization/Gr6%20-%20Data%20Visualization%20Presentation.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                View Presentation
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECT NAVIGATION
+    ====================================================== -->
+
+    <section>
+
+        <div class="project-navigation">
+
+
+            <a
+                href="../index.html#projects"
+                class="project-navigation-all"
+            >
+                ← All Projects
+            </a>
+
+
+            <a
+                href="database-marketing.html"
+                class="project-navigation-next"
+            >
+
+                <span>
+                    NEXT PROJECT
+                </span>
+
+                Database Marketing
+                →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
     <footer>
 
-        <p>
+        <div class="footer-inner">
+
+            <div>
+
+                <strong>
+                    Ruchi Patel
+                </strong>
+
+                <p>
+                    B2B Partner Marketing · Channel Strategy · Marketing Operations
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/patel2811"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <p class="footer-copyright">
             © 2026 Ruchi Patel · Marketing Portfolio
         </p>
 
