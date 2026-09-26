@@ -1310,3 +1310,160 @@ section:last-of-type .case-study-action {
 
     background: var(--blue);
 }
+
+/* =========================================================
+   HOMEPAGE EXPERIENCE — VERTICAL TIMELINE
+   ========================================================= */
+
+.experience-track {
+    display: none !important;
+}
+
+
+/* Main vertical timeline */
+
+.experience-section .timeline {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 55px auto 0;
+
+    padding-left: 48px;
+}
+
+
+/* Vertical connector */
+
+.experience-section .timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    bottom: 8px;
+    left: 12px;
+
+    width: 2px;
+
+    background: var(--blue-border);
+}
+
+
+/* Individual experience item */
+
+.experience-section .timeline-item {
+    position: relative;
+
+    margin-bottom: 46px;
+    padding-bottom: 4px;
+}
+
+
+/* Timeline circle */
+
+.experience-section .timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -43px;
+    top: 5px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    border: 4px solid var(--blue-soft);
+
+    box-shadow:
+        0 0 0 2px var(--blue-border);
+}
+
+
+/* Number + date */
+
+.experience-section .timeline-item .date {
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+
+/* Company */
+
+.experience-section .timeline-item h3 {
+    margin-bottom: 8px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 1.55rem;
+
+    color: var(--navy);
+}
+
+
+/* Role */
+
+.experience-section .timeline-item p strong {
+    color: var(--text);
+}
+
+
+/* Description */
+
+.experience-section .timeline-item > p:last-child {
+    max-width: 720px;
+
+    margin-top: 12px;
+
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+
+/* Resume link */
+
+.experience-section .section-action {
+    max-width: 900px;
+    margin: 12px auto 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .experience-section .timeline {
+        padding-left: 38px;
+        margin-top: 40px;
+    }
+
+    .experience-section .timeline::before {
+        left: 8px;
+    }
+
+    .experience-section .timeline-item::before {
+        left: -35px;
+    }
+
+    .experience-section .timeline-item h3 {
+        font-size: 1.35rem;
+    }
+
+    .experience-section .timeline-item > p:last-child {
+        font-size: 0.92rem;
+    }
+
+}
