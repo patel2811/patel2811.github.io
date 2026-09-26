@@ -1467,3 +1467,662 @@ section:last-of-type .case-study-action {
     }
 
 }
+
+/* =========================================================
+   GLOBAL PORTFOLIO TYPOGRAPHY + SPACING SYSTEM
+   Applies across homepage and all project pages
+   ========================================================= */
+
+/* ---------- Global sizing ---------- */
+
+:root {
+    --content-width: 1080px;
+    --page-gutter: 6%;
+}
+
+
+/* ---------- Base body typography ---------- */
+
+body {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+}
+
+
+/* ---------- Global headings ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+
+/* Section headings */
+
+section > h2,
+.section-heading h2,
+.section-intro h2 {
+    width: 100%;
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(2.4rem, 4.2vw, 3.25rem);
+}
+
+
+/* Section body copy */
+
+section > p,
+.section-heading > p,
+.section-intro > p {
+    width: 100%;
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* Smaller labels / eyebrows */
+
+.eyebrow {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+
+    letter-spacing: 0.16em;
+    font-weight: 700;
+}
+
+
+/* ---------- Section spacing ---------- */
+
+section {
+    padding: 82px 0;
+}
+
+
+/* Every main section uses the same horizontal grid */
+
+section > * {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- Body text ---------- */
+
+p {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* ---------- Subheadings ---------- */
+
+h3 {
+    font-size: 1.35rem;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.site-nav {
+    width: 100%;
+
+    padding: 16px var(--page-gutter);
+}
+
+
+.site-nav > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.nav-logo {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+.nav-links a {
+    margin-left: 0;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+.nav-resume {
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   HOMEPAGE HERO
+   ========================================================= */
+
+.home-hero {
+    min-height: 690px;
+
+    padding: 80px 0 70px;
+}
+
+
+.home-hero .hero-content {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+}
+
+
+/* Hero eyebrow */
+
+.home-hero .eyebrow {
+    margin-bottom: 16px;
+}
+
+
+/* Hero name */
+
+.home-hero h1 {
+    margin-bottom: 16px;
+
+    font-size: clamp(3.4rem, 6vw, 5rem);
+
+    line-height: 1.02;
+}
+
+
+/* Professional title */
+
+.home-hero h2 {
+    margin-bottom: 18px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+
+    line-height: 1.45;
+}
+
+
+/* Hero tagline */
+
+.home-hero .hero-tagline {
+    max-width: 700px;
+
+    margin-bottom: 14px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.65;
+}
+
+
+/* Hero supporting copy */
+
+.home-hero .hero-description {
+    max-width: 680px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.75;
+}
+
+
+/* Hero actions */
+
+.home-hero .hero-actions {
+    margin-top: 24px;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about-content {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+.about-content .lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.capabilities-grid {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.capability-card {
+    padding: 26px;
+}
+
+
+.capability-card h3 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+
+.capability-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-section .section-heading,
+.experience-section .timeline,
+.experience-section .section-action {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Timeline typography */
+
+.experience-section .timeline-item h3 {
+    font-size: 1.55rem;
+}
+
+
+.experience-section .timeline-item .date {
+    font-size: 0.8rem;
+}
+
+
+.experience-section .timeline-item > p:last-child {
+    max-width: 720px;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HOMEPAGE PROJECTS
+   ========================================================= */
+
+.projects-section .section-heading {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.homepage-project-grid {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.homepage-project-card h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+
+.homepage-project-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-section .section-heading,
+.education-grid {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.education-card {
+    padding: 26px;
+}
+
+
+.education-card h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+
+.education-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-content {
+    width: min(
+        760px,
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.contact-content h2 {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+}
+
+
+.contact-content > p:not(.eyebrow) {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CASE STUDY PAGES
+   ========================================================= */
+
+/* Case-study hero */
+
+body:has(.case-study-image) .hero {
+    min-height: 560px;
+
+    padding: 80px 0;
+}
+
+
+body:has(.case-study-image) .hero > div {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body:has(.case-study-image) .hero h1 {
+    max-width: 900px;
+
+    margin-top: 18px;
+    margin-bottom: 20px;
+
+    font-size: clamp(3rem, 5vw, 4.6rem);
+
+    line-height: 1.05;
+}
+
+
+body:has(.case-study-image) .hero p {
+    max-width: 760px;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* Case-study section headings */
+
+body:has(.case-study-image) section > h2 {
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+}
+
+
+/* Case-study normal paragraphs */
+
+body:has(.case-study-image) section > p {
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+
+/* Case-study cards */
+
+body:has(.case-study-image) .project-card,
+body:has(.case-study-image) .skill-card {
+    font-size: 1rem;
+}
+
+
+body:has(.case-study-image) .project-card h3,
+body:has(.case-study-image) .skill-card h3 {
+    font-size: 1.35rem;
+}
+
+
+/* Case-study card copy */
+
+body:has(.case-study-image) .project-card p,
+body:has(.case-study-image) .skill-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* Case-study images */
+
+body:has(.case-study-image) .case-study-image {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Dashboard */
+
+body:has(.dashboard-showcase) .dashboard-showcase > * {
+    width: min(
+        var(--content-width),
+        calc(100% - 2 * var(--page-gutter))
+    );
+
+    max-width: var(--content-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body:has(.dashboard-showcase) .dashboard-showcase > h2 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    padding: 12px 20px;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    :root {
+        --page-gutter: 5%;
+    }
+
+
+    section {
+        padding: 65px 0;
+    }
+
+
+    section > * {
+        width: calc(100% - 2 * var(--page-gutter));
+    }
+
+
+    section > h2,
+    .section-heading h2,
+    .section-intro h2 {
+        font-size: 2.25rem;
+    }
+
+
+    p {
+        font-size: 0.95rem;
+    }
+
+
+    .home-hero {
+        min-height: auto;
+
+        padding: 65px 0 75px;
+    }
+
+
+    .home-hero h1 {
+        font-size: 3.25rem;
+    }
+
+
+    .home-hero h2 {
+        font-size: 1.05rem;
+    }
+
+
+    .home-hero .hero-tagline {
+        font-size: 1.08rem;
+    }
+
+
+    .nav-links {
+        gap: 14px;
+    }
+
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+
+    body:has(.case-study-image) .hero {
+        min-height: auto;
+
+        padding: 65px 0;
+    }
+
+
+    body:has(.case-study-image) .hero h1 {
+        font-size: 2.9rem;
+    }
+
+}
