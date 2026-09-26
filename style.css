@@ -2386,3 +2386,72 @@ body:has(.case-study-image) .skill-card p {
     color: var(--blue) !important;
     transform: translateX(-3px);
 }
+/* =========================================================
+   GLOBAL PORTFOLIO FOOTER
+   Homepage + all project pages
+   ========================================================= */
+
+.site-footer {
+    width: 100%;
+
+    padding:
+        clamp(42px, 5vw, 58px)
+        var(--gutter);
+
+    background: var(--navy-dark);
+
+    text-align: center;
+}
+
+
+.site-footer-content {
+    width: var(--content-width);
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Ruchi Patel */
+
+.site-footer-name {
+    color: var(--white);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(1.35rem, 0.7vw + 1.1rem, 1.65rem);
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* Copyright */
+
+.site-footer-copyright {
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(0.78rem, 0.15vw + 0.74rem, 0.86rem);
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
