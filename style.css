@@ -1294,3 +1294,19 @@ section:last-of-type .case-study-action {
     }
 
 }
+/* =========================================================
+   EXPERIENCE TIMELINE LINE FIX
+   Run connector directly through timeline circles
+   ========================================================= */
+
+.experience-track::before {
+    top: 61px;
+    z-index: 0;
+}
+
+.experience-dot {
+    position: relative;
+    z-index: 2;
+
+    background: var(--blue);
+}
