@@ -2126,3 +2126,122 @@ body:has(.dashboard-showcase) .dashboard-showcase > h2 {
     }
 
 }
+/* =========================================================
+   FLUID TYPOGRAPHY
+   Scales smoothly with browser/window size
+   ========================================================= */
+
+:root {
+    --fluid-body: clamp(0.92rem, 0.25vw + 0.82rem, 1rem);
+    --fluid-small: clamp(0.72rem, 0.16vw + 0.68rem, 0.8rem);
+    --fluid-h3: clamp(1.15rem, 0.65vw + 0.95rem, 1.45rem);
+    --fluid-section: clamp(2rem, 2.8vw + 0.8rem, 3.2rem);
+    --fluid-page-title: clamp(3rem, 5.5vw, 5rem);
+}
+
+
+/* ---------- Body ---------- */
+
+body {
+    font-size: var(--fluid-body);
+    line-height: 1.7;
+}
+
+
+/* ---------- Small labels ---------- */
+
+.eyebrow {
+    font-size: var(--fluid-small) !important;
+}
+
+
+/* ---------- Section headings ---------- */
+
+section > h2,
+.section-heading h2,
+.section-intro h2 {
+    font-size: var(--fluid-section);
+}
+
+
+/* ---------- Card headings ---------- */
+
+h3,
+.project-card h3,
+.skill-card h3,
+.education-card h3,
+.capability-card h3 {
+    font-size: var(--fluid-h3);
+}
+
+
+/* ---------- Homepage title ---------- */
+
+.home-hero h1 {
+    font-size: var(--fluid-page-title);
+}
+
+
+/* ---------- Homepage role line ---------- */
+
+.home-hero h2 {
+    font-size: clamp(1rem, 1vw + 0.7rem, 1.45rem);
+}
+
+
+/* ---------- Hero supporting text ---------- */
+
+.home-hero .hero-tagline {
+    font-size: clamp(1.05rem, 1vw + 0.7rem, 1.25rem);
+}
+
+
+.home-hero .hero-description {
+    font-size: clamp(0.9rem, 0.25vw + 0.78rem, 1rem);
+}
+
+
+/* ---------- Case study titles ---------- */
+
+body:has(.case-study-image) .hero h1 {
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+}
+
+
+/* ---------- Case study section headings ---------- */
+
+body:has(.case-study-image) section > h2 {
+    font-size: clamp(2rem, 3vw + 0.4rem, 3.1rem);
+}
+
+
+/* ---------- General paragraphs ---------- */
+
+p,
+.project-card p,
+.skill-card p,
+.education-card p,
+.capability-card p,
+.experience-section .timeline-item > p:last-child {
+    font-size: var(--fluid-body);
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    font-size: clamp(0.84rem, 0.25vw + 0.76rem, 0.95rem);
+
+    padding:
+        clamp(10px, 0.5vw + 7px, 13px)
+        clamp(17px, 0.7vw + 13px, 22px);
+}
+
+
+/* ---------- Navigation ---------- */
+
+.nav-links a,
+.nav-resume,
+.nav-logo {
+    font-size: clamp(0.82rem, 0.25vw + 0.74rem, 1rem);
+}
