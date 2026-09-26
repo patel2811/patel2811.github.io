@@ -2345,3 +2345,18 @@ body:has(.case-study-image) .skill-card p {
     }
 
 }
+/* Match Back to Top with Scroll to Explore */
+
+.contact-section .back-to-top,
+.contact-section .back-to-top:visited {
+    color: var(--text) !important;
+}
+
+.contact-section .back-to-top span {
+    color: var(--text) !important;
+}
+
+.contact-section .back-to-top:hover,
+.contact-section .back-to-top:hover span {
+    color: var(--blue) !important;
+}
